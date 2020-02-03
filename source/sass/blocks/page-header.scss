@@ -33,9 +33,8 @@
 
   display: flex;
   align-items: center;
-  width: 165px;
+  width: 168px;
   min-height: 100%;
-  margin-right: 68px;
   padding-top: 18px;
   padding-right: 0;
   padding-bottom: 18px;
@@ -47,7 +46,7 @@
   @include transition;
 
   &:focus-within {
-    width: 40%;
+    width: 45%;
   }
 
   &::after {
@@ -126,6 +125,10 @@
   margin-right: 27px;
 }
 
+.page-header__nav {
+  min-width: calc(48% - 236px);
+}
+
 .page-header__nav-list {
   @include list-reset;
   display: flex;
@@ -152,7 +155,7 @@
 
       position: absolute;
       bottom: 0;
-      left: 1px;
+      left: 2px;
 
       width: calc(100% - 4px);
       height: 5px;
@@ -204,8 +207,9 @@
 
 .page-header__account {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  margin-left: auto;
+  min-width: 48%;
   padding-right: 16px;
 
   svg {
