@@ -1,0 +1,87 @@
+.feature {
+  @include list-reset;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include font($font-family_primary, 8px, 400, 12px);
+}
+
+.feature__text {
+  max-width: 90px;
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 4px;
+
+  color: #2973b8;
+  text-align: center;
+
+  span {
+    border-bottom: 1px dotted #2973b8;
+  }
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.25;
+  }
+}
+
+.feature__progress {
+  position: relative;
+}
+
+.feature__progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -56%);
+
+  @include font($font-family_primary, $font-size_l, 400, $line-height_l);
+  color: $black;
+}
+
+.feature__progress-circle {
+  transform: rotate(-90deg);
+}
+
+.feature__progress-meter,
+.feature__progress-bar {
+  fill: none;
+}
+
+.feature__progress-meter {
+  stroke: #e6e6e6;
+}
+
+.feature__progress-bar {
+  stroke: #76bd6f;
+}
+
+.feature__level {
+  display: block;
+  width: 43px;
+  height: 43px;
+  padding-top: 5px;
+
+  background-color: #a4d477;
+  border-radius: 50%;
+
+  color: $white;
+  text-align: center;
+}
+
+.feature__level-text {
+  display: inline-block;
+}
+
+.feature__level-value {
+  @include font($font-family_primary, $font-size_xl, 400, $line-height_xl);
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Модульбанк - тестовое задание</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__inner">
+      <div class="page-header__search-panel">
+        <a class="page-header__logo">
+          <img src="img/icon-logo.svg" alt="Логотип Модульбанка" width="24" height="24">
+        </a>
+        <form class="page-header__search-form" method="get" action="#">
+          <div class="page-header__search-item">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+            <label class="visually-hidden" for="search">
+              Поиск по сайту
+            </label>
+            <input type="search" name="search" value="" placeholder="Поиск" size="60" id="search">
+            <button type="submit">
+              Искать
+            </button>
+          </div>
+        </form>
+      </div>
+      <nav class="page-header__nav">
+        <ul class="page-header__nav-list">
+          <li class="page-header__nav-item page-header__nav-item_current">
+            <a class="page-header__nav-link" href="#">
+              Деньги
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="#">
+              Контакты
+            </a>
+          </li>
+          <li class="page-header__nav-item dropdown">
+            <a class="page-header__nav-link dropdown__head" href="#">
+              Услуги
+            </a>
+            <ul class="page-header__services dropdown__body">
+              <li class="page-header__services-item">
+                <a class="page-header__services-link" href="#"></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__create-button popup-show-js" type="button">
+        <svg width="42" height="42">
+          <use xlink:href="#icon-plus"></use>
+        </svg>
+        <span class="visually-hidden">
+          Создать новый платёж
+        </span>
+      </button>
+      <div class="page-header__account">
+        <a class="page-header__notifications notifications" href="#">
+          <svg class="notifications__icon" width="15" height="19">
+            <use xlink:href="#icon-bell"></use>
+          </svg>
+          <span class="notifications__count">
+            2
+          </span>
+        </a>
+        <div class="page-header__account-menu dropdown">
+          <a class="page-header__account-link dropdown__head" href="#">
+            <svg width="17px" height="17px">
+              <use xlink:href="#icon-building"></use>
+            </svg>
+            <span>
+              ООО «РОДНЫЕ ПРОСТОРЫ»
+            </span>
+          </a>
+          <ul class="page-header__account-list dropdown__body">
+            <li class="page-header__account-item">
+              <a class="page-header__account-link" href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <h1 class="visually-hidden">
+      Модульбанк
+    </h1>
+    <div class="page-content__inner">
+      <article class="payment popup-js">
+        <div class="payment__heading">
+          <button class="payment__close-button popup-close-js">
+            <span class="visually-hidden">
+              Закрыть окно
+            </span>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+          <h2 class="payment__title">
+            Платежное поручение
+            № <span class="payment__number">5241234</span>
+            от <span class="payment__date">23.09.2015</span>
+          </h2>
+        </div>
+        <div class="payment__content">
+          <p class="payment__remittance-info">
+            <strong class="payment__remittance-amount">
+              – 23 500,00 ₽
+            </strong>
+            <span class="payment__remittance-check">
+              со счета: <span class="payment__check-name">Расчетный счет (***012345)</span>
+            </span>
+            <span class="payment__remittance-status">
+              ИСПОЛНЕН, 21 июня 15:33
+            </span>
+          </p>
+          <div class="payment__details">
+            <div class="payment__receiver">
+              <div class="payment__receiver-data">
+                <h3 class="payment__receiver-title">
+                  ООО "Родные просторы"
+                </h3>
+                <ul class="payment__receiver-requisites">
+                  <li>ИНН: 22341497819132</li>
+                  <li>Банк: ОАО Сбербанк</li>
+                  <li>БИК: 2352362365</li>
+                  <li>Счет: 40802810970010000395</li>
+                </ul>
+              </div>
+              <ul class="payment__receiver-features">
+                <li class="feature">
+                  <a class="feature__text" href="#">
+                    <span>
+                      Высокая финансовая устойчивость
+                    </span>
+                  </a>
+                  <div class="feature__progress">
+                    <span class="feature__progress-value">
+                      88
+                    </span>
+                    <svg class="feature__progress-circle" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="feature__progress-meter" cx="21.5" cy="21.5" r="20.5" stroke="#e6e6e6" fill="none" stroke-width="2"/>
+                      <circle class="feature__progress-bar" cx="21.5" cy="21.5" r="20.5" stroke="#76bd6f" fill="none" stroke-width="2" stroke-dasharray="128.8" stroke-dashoffset="128.8"/>
+                    </svg>
+                  </div>
+                </li>
+                <li class="feature">
+                  <a class="feature__text" href="#">
+                    <span>
+                      Высокая благонадежность
+                    </span>
+                  </a>
+                  <div class="feature__progress">
+                    <span class="feature__progress-value">
+                      100
+                    </span>
+                    <svg class="feature__progress-circle" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="feature__progress-meter" cx="21.5" cy="21.5" r="20.5" stroke="#e6e6e6" fill="none" stroke-width="2"/>
+                      <circle class="feature__progress-bar" cx="21.5" cy="21.5" r="20.5" stroke="#76bd6f" fill="none" stroke-width="2" stroke-dasharray="128.8" stroke-dashoffset="128.8"/>
+                    </svg>
+                  </div>
+                </li>
+                <li class="feature">
+                  <a class="feature__text" href="#">
+                    <span>
+                      Кредитоспособность 45,5 млрд ₽
+                    </span>
+                  </a>
+                  <div class="feature__level">
+                    <span class="feature__level-text">
+                      <span class="feature__level-value">1</span>
+                      <br>
+                      Класс
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <p class="payment__description">
+              Оплата за партию ромашек и одуванчиков по договору
+              <br>
+              14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС
+              <br>
+              18% - 1450,00 ₽
+            </p>
+            <div class="payment__commission">
+              <p class="payment__commission-amount">
+                Комиссия банка: 70 р.
+              </p>
+              <p class="payment__commission-rules">
+                Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является
+                ознакомительным. Точный размер комиссии определяется после передачи платежного
+                документа на обработку в банк.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="payment__menu">
+          <ul class="payment__menu-list">
+            <li class="payment__menu-item">
+              <a class="payment__menu-link" href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="#icon-repeat"></use>
+                </svg>
+                <span>
+                  Повторить
+                </span>
+              </a>
+            </li>
+            <li class="payment__menu-item">
+              <a class="payment__menu-link" href="#">
+                <svg width="21" height="20">
+                  <use xlink:href="#icon-favorite"></use>
+                </svg>
+                <span>
+                  В избранное
+                </span>
+              </a>
+            </li>
+            <li class="payment__menu-item">
+              <a class="payment__menu-link" href="#">
+                <svg width="22" height="20">
+                  <use xlink:href="#icon-ask"></use>
+                </svg>
+                <span>
+                  Спросить
+                </span>
+              </a>
+            </li>
+            <li class="payment__menu-item">
+              <a class="payment__menu-link" href="#">
+                <svg width="22" height="4">
+                  <use xlink:href="#icon-more"></use>
+                </svg>
+                <span>
+                  Действия
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

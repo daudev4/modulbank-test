@@ -1,0 +1,24 @@
+.notifications {
+  position: relative;
+}
+
+.notifications__count {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  min-width: 18px;
+  min-height: 18px;
+  padding-top: 1px;
+
+  font-size: $font-size_xs;
+  line-height: $line-height_xs;
+  text-align: center;
+
+  border: 2px solid $cyan_dark;
+  border-radius: 50%;
+  background-color: $red;
+
+  transform: translate(66%, -33%);
+}

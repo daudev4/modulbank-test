@@ -1,0 +1,250 @@
+.payment {
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  margin-left: auto;
+  max-width: 900px;
+  min-height: calc(100vh - 60px);
+
+  @include font-main;
+  color: $text-color_primary;
+
+  background-color: $background-color_secondary;
+  box-shadow: -8px 9px 25px rgba(49, 68, 93, 0.23112);
+}
+
+.payment_show {
+  display: flex;
+}
+
+.payment__heading {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-right: 32px;
+  padding-bottom: 17px;
+  padding-left: 32px;
+
+  background: rgba(0, 0, 0, 0.0289572);
+}
+
+.payment__close-button {
+  @include button-reset;
+
+  display: block;
+  height: 15px;
+  margin-right: 27px;
+
+  cursor: pointer;
+  background-color: transparent;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.25;
+  }
+}
+
+.payment__title {
+  margin: 0;
+
+  @include font($font-family_primary, $font-size_xxl, 300, $line-height_xxl);
+  color: $text-color_secondary;
+}
+
+.payment__content {
+  flex: 1 0 auto;
+  max-height: calc(100vh - 180px);
+  padding-top: 25px;
+  padding-right: 170px;
+  padding-left: 170px;
+
+  overflow: auto;
+}
+
+.payment__remittance-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.payment__remittance-amount {
+  margin-bottom: 3px;
+
+  @include font($font-family_primary, $font-size_xxxl, 300, $line-height_xxxl);
+  color: $red_dark;
+}
+
+.payment__remittance-check {
+  margin-left: 7px;
+  margin-bottom: 12px;
+
+  @include font($font-family_primary, $font-size_l, 300, $line-height_l);
+  color: $gray_blueish;
+}
+
+.payment__check-name {
+  color: $text-color_primary;
+}
+
+.payment__remittance-status {
+  padding: 3px 0;
+  padding-left: 11px;
+  padding-right: 9px;
+
+  @include font($font-family_primary, 11px, 500, 13px);
+  color: $white;
+
+  background-color: $green_strong;
+  border-radius: 125px;
+}
+
+.payment__details {
+  margin-top: 16px;
+  margin-left: 13px;
+}
+
+.payment__receiver {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 18px;
+  padding-right: 52px;
+
+  background-color: $background-color_secondary;
+  border-radius: 2px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.390682),
+              0px 3px 10px rgba(0, 0, 0, 0.0869282);
+}
+
+.payment__receiver-title {
+  margin: 0;
+  margin-bottom: 13px;
+  padding-top: 6px;
+
+  @include font($font-family_primary, $font-size_xl, 400, 23px);
+}
+
+.payment__receiver-requisites {
+  @include list-reset;
+
+  @include font($font-family_primary, $font-size_l, 300, $line-height_xxl);
+}
+
+.payment__receiver-features {
+  @include list-reset;
+
+  .feature {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.payment__description {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  margin-top: -5px;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+
+  font-size: $font-size_l;
+  line-height: $line-height_l;
+  color: $text-color_secondary;
+
+  background-color: $gray-lightest;
+  border-radius: 2px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.239102),
+              0px 4px 15px rgba(0, 0, 0, 0.0869282),
+              0px 2px 3px rgba(0, 0, 0, 0.0651891);
+}
+
+.payment__commission {
+  padding-top: 22px;
+  padding-left: 2px;
+
+  font-size: $font-size_s;
+  line-height: $line-height_m;
+  color: $gray;
+
+  p {
+    margin: 0;
+  }
+}
+
+.payment__menu {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  background: $background-color_secondary;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.239102),
+              0px 0px 15px rgba(0, 0, 0, 0.0869282);
+}
+
+.payment__menu-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 545px;
+  margin-left: 12px;
+}
+
+.payment__menu-item {
+  margin-right: 46px;
+
+  &:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.payment__menu-link {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+
+  color: inherit;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.25;
+  }
+}
+
+
+

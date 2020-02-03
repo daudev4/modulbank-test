@@ -1,0 +1,32 @@
+.dropdown__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+
+    width: 7px;
+    height: 4px;
+    margin-left: 5px;
+
+    background-image: url("../img/icon-arrow_down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include transition;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdown__body {
+  @include list-reset;
+  display: none;
+}

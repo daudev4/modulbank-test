@@ -1,0 +1,59 @@
+// colors
+$black: #000000;
+
+$white: #ffffff;
+
+$gray_lightest: #f2f2f2;
+$gray_light: #EDEFF1;
+$gray: #808080;
+$gray_blueish: #828A96;
+$gray_darkest: #2B2B2B;
+
+$red: #e54d4d;
+$red_dark: #CF4545;
+
+$blue: #00417B;
+$blue_darkest: #2C2F32;
+
+$green: #8DC540;
+$green_strong: #81c624;
+
+$cyan: #46d2cc;
+$cyan_dark: #37AEC1;
+
+// color pallete
+$background-color_primary: $gray_light;
+$background-color_secondary: $white;
+$background-color_accent: $blue;
+$background-color_indicator: $green;
+
+$text-color_primary: $blue_darkest;
+$text-color_secondary: $gray_darkest;
+$text-color_accent: $white;
+$text-color_indicator: $green;
+
+// fonts
+$font-family_primary: "Roboto", "Arial", sans-serif;
+
+$font-size_xxxl: 46px;
+$font-size_xxl: 24px;
+$font-size_xl: 20px;
+$font-size_l: 16px;
+$font-size_m: 14px;
+$font-size_s: 12px;
+$font-size_xs: 10px;
+
+$line-height_xxxl: 54px;
+$line-height_xxl: 28px;
+$line-height_xl: 22px;
+$line-height_l: 20px;
+$line-height_m: 16px;
+$line-height_s: 13px;
+$line-height_xs: 12px;
+
+// breakpoints
+$page-min-width: 1024px;
+
+// retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
