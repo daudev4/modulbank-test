@@ -20,6 +20,7 @@
   display: flex;
   align-items: center;
   max-width: 1480px;
+  min-height: 60px;
   margin: 0 auto;
   padding-left: 236px;
 }
@@ -32,7 +33,7 @@
 
   display: flex;
   align-items: center;
-  align-self: stretch;
+  width: 165px;
   min-height: 100%;
   margin-right: 68px;
   padding-top: 18px;
@@ -42,6 +43,12 @@
 
   background-color: $background-color_secondary;
   box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.20287);
+
+  @include transition;
+
+  &:focus-within {
+    width: 40%;
+  }
 
   &::after {
     content: "";
@@ -60,11 +67,27 @@
   }
 }
 
+.page-header__search-form {
+  flex-grow: 1;
+}
+
 .page-header__search-item {
   display: flex;
   align-items: center;
 
+  @include transition;
+
+  &:hover {
+    opacity: 0.5
+  }
+
+  button {
+    display: none;
+  }
+
   input[type="search"] {
+    display: block;
+    flex-grow: 1;
     width: 69px;
     margin-left: 10px;
     padding: 0;
@@ -72,23 +95,28 @@
     @include font-main();
 
     @include transition;
+
     background-color: transparent;
     border: none;
     outline: none;
 
-    &::placeholder {
+    &:focus {
+      box-shadow: inset 0 -1px 0 0 $background-color_accent;
+    }
+
+    &:-ms-input-placeholder {
+      @include transition;
+
       color: $text-color_secondary;
       text-transform: uppercase;
     }
 
-    &:focus {
-      width: calc(100% - 28px);
-      box-shadow: inset 0 -1px 0 0 $background-color_accent;
-    }
-  }
+    &::placeholder {
+      @include transition;
 
-  button {
-    display: none;
+      color: $text-color_secondary;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -97,10 +125,6 @@
   min-height: 24px;
   margin-right: 27px;
 }
-
-// .page-header__nav {
-//   margin-right: 115px;
-// }
 
 .page-header__nav-list {
   @include list-reset;
@@ -112,9 +136,11 @@
 .page-header__nav-item {
   position: relative;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
   margin-right: 36px;
-
-  line-height: 60px;
 
   &:last-of-type {
     margin-right: 0;
@@ -137,6 +163,10 @@
 }
 
 .page-header__nav-link {
+  display: inline-block;
+
+  @include font-main();
+
   &[href]:hover,
   &[href]:focus {
     color: $text-color_indicator;
